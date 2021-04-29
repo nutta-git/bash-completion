@@ -3,33 +3,33 @@ import pytest
 from conftest import assert_complete
 
 
-class TestSudo:
-    @pytest.mark.complete("sudo -", require_cmd=True)
+class TestDoas:
+    @pytest.mark.complete("doas -", require_cmd=True)
     def test_1(self, completion):
         assert completion
 
-    @pytest.mark.complete("sudo cd foo", cwd="shared/default")
+    @pytest.mark.complete("doas cd foo", cwd="shared/default")
     def test_2(self, completion):
         assert completion == ".d/"
         assert not completion.endswith(" ")
 
-    @pytest.mark.complete("sudo sh share")
+    @pytest.mark.complete("doas sh share")
     def test_3(self, completion):
         assert completion == "d/"
         assert not completion.endswith(" ")
 
-    @pytest.mark.complete("sudo mount /dev/sda1 def", cwd="shared")
+    @pytest.mark.complete("doas mount /dev/sda1 def", cwd="shared")
     def test_4(self, completion):
         assert completion == "ault/"
         assert not completion.endswith(" ")
 
-    @pytest.mark.complete("sudo -e -u root bar foo", cwd="shared/default")
+    @pytest.mark.complete("doas -e -u root bar foo", cwd="shared/default")
     def test_5(self, completion):
         assert completion == "foo foo.d/".split()
 
     def test_6(self, bash, part_full_user):
         part, full = part_full_user
-        completion = assert_complete(bash, "sudo chown %s" % part)
+        completion = assert_complete(bash, "doas chown %s" % part)
         assert completion == full[len(part) :]
         assert completion.endswith(" ")
 
@@ -37,7 +37,7 @@ class TestSudo:
         _, user = part_full_user
         partgroup, fullgroup = part_full_group
         completion = assert_complete(
-            bash, "sudo chown %s:%s" % (user, partgroup)
+            bash, "doas chown %s:%s" % (user, partgroup)
         )
         assert completion == fullgroup[len(partgroup) :]
         assert completion.endswith(" ")
