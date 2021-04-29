@@ -1,4 +1,4 @@
-# Maintainer: Chocobo1 <chocobo1 AT archlinux DOT net>
+# Maintainer nutta-git @Github 
 
 pkgname=bash-completion-git-for-doas
 pkgver=2.11.r233.gbe5f8b9d
