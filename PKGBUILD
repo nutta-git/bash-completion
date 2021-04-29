@@ -1,6 +1,6 @@
 # Maintainer: Chocobo1 <chocobo1 AT archlinux DOT net>
 
-pkgname=bash-completion-git
+pkgname=bash-completion-git-for-doas
 pkgver=2.11.r233.gbe5f8b9d
 pkgrel=1
 pkgdesc="Programmable completion functions for bash"
