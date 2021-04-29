@@ -357,7 +357,7 @@ strace
 strings
 strip
 su
-sudo
+doas
 sum
 synclient
 sysbench
