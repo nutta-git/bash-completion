@@ -400,7 +400,7 @@ bashcomp_DATA = 2to3 \
 		strace \
 		strings \
 		_su \
-		sudo \
+		doas \
 		svcadm \
 		svk \
 		_svn \
