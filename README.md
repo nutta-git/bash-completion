@@ -1,4 +1,4 @@
-# bash-completion
+# bash-completion-for-doas
 
 [![Build Status](https://travis-ci.org/scop/bash-completion.svg?branch=master)](https://travis-ci.org/scop/bash-completion)
 
@@ -18,66 +18,6 @@ git clone https://github.com/nutta-git/bash-completion-for-doas
 cd bash-completion-for-doas
 makepkg -si 
 ```
-
-The easiest way to install this software is to use a package; refer to
-[Repology](https://repology.org/project/bash-completion) for a comprehensive
-list of operating system distributions, package names, and available versions.
-
-Depending on the package, you may still
-need to source it from either `/etc/bashrc` or `~/.bashrc` (or any
-other file sourcing those). You can do this by simply using:
-
-```shell
-# Use bash-completion, if available
-[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
-    . /usr/share/bash-completion/bash_completion
-```
-
-(if you happen to have *only* bash >= 4.2 installed, see further if not)
-
-If you don't have the package readily available for your distribution, or
-you simply don't want to use one, you can install bash completion using the
-standard commands for GNU autotools packages:
-
-```shell
-autoreconf -i  # if not installing from prepared release tarball
-./configure
-make           # GNU make required
-make check     # optional, requires python3 with pytest >= 3.6, pexpect
-make install   # as root
-```
-
-These commands install the completions and helpers, as well as a
-`profile.d` script that loads `bash_completion` where appropriate.
-
-If your system does not use the `profile.d` directory (usually below
-`/etc`) mechanism—i.e. does not automatically source shell scripts in
-it—you can source the `$sysconfdir/profile.d/bash_completion.sh`
-script in `/etc/bashrc` or `~/.bashrc`.
-
-The `profile.d` script provides a configuration file hook that can be
-used to prevent loading `bash_completion` on per user basis when it's
-installed system wide. To do this:
-
-1. Turn off programmable completion with `shopt -u progcomp` in
-   `$XDG_CONFIG_HOME/bash_completion` (or `~/.config/bash_completion`
-   if `$XDG_CONFIG_HOME` is not set)
-2. Turn it back on (for example in `~/.bashrc`) if you want to use
-   programmable completion for other purposes.
-
-### macOS (OS X)
-
-If you're using macOS (formerly OS X), `/etc/bashrc` is apparently not sourced at
-all. In that case, you can put the `bash_completion` file in `/sw/etc`
-and add the following code to `~/.bash_profile`:
-
-```shell
-if [ -f /sw/etc/bash_completion ]; then
-   . /sw/etc/bash_completion
-fi
-```
-
-
 ## Troubleshooting
 
 If you find that a given function is producing errors or does not work
