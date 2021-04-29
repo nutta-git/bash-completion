@@ -1,12 +1,12 @@
-# bash completion for sudo(8)                              -*- shell-script -*-
+# bash completion for doas(8)                              -*- shell-script -*-
 
-_sudo()
+_doas()
 {
     local cur prev words cword split
     _init_completion -s || return
 
     local i mode=normal
-    [[ $1 == *sudoedit ]] && mode=edit
+    [[ $1 == *doasedit ]] && mode=edit
 
     [[ $mode == normal ]] &&
         for ((i = 1; i <= cword; i++)); do
@@ -52,6 +52,6 @@ _sudo()
         _filedir
     fi
 } &&
-    complete -F _sudo sudo sudoedit
+    complete -F _doas doas doasedit
 
 # ex: filetype=sh
