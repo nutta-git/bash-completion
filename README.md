@@ -2,7 +2,9 @@
 
 ## Introduction
 
-Please review my patches before using this code base, I only replaced the words sudo with doas. I don't know the security implications of this procedure. With that being said, 
+Please review my patches, **https://github.com/nutta-git/bash-completion-for-doas/blob/master/completions/doas**
+
+before using this code base, I only replaced the word sudo with doas. I don't know the security implications of this procedure. With that being said, 
 ## Use this source code at your own risk! 
 
 **https://github.com/nutta-git/bash-completion-for-doas/blob/master/completions/doas**
