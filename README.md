@@ -2,6 +2,11 @@
 
 ## Introduction
 
+Please review my patches before using this code base, I only replaced the words sudo with doas. I don't know the security implications of this procedure. With that being said, 
+## Use this program at your own risk. 
+
+**https://github.com/nutta-git/bash-completion-for-doas/blob/master/completions/doas**
+
 bash-completion-for-doas is a collection of command line command completions for the
 [Bash shell](https://www.gnu.org/software/bash/), collection of helper
 functions to assist in creating new completions, and set of facilities for
