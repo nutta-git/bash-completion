@@ -8,7 +8,7 @@ from conftest import assert_complete
 @pytest.mark.bashcomp(
     pre_cmds=(
         # Fake root command to get all users/groups completed at least for now
-        "root_command=sudo",
+        "root_command=doas",
     )
 )
 class TestChown:
