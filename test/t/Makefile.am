@@ -581,7 +581,7 @@ EXTRA_DIST = \
 	test_strings.py \
 	test_strip.py \
 	test_su.py \
-	test_sudo.py \
+	test_doas.py \
 	test_sum.py \
 	test_svcadm.py \
 	test_svk.py \
