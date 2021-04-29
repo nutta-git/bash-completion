@@ -11,6 +11,14 @@ loading completions automatically on demand, as well as installing them.
 
 ## Installation
 
+### Arch Linux
+
+```shell
+git clone https://github.com/nutta-git/bash-completion-for-doas
+cd bash-completion-for-doas
+makepkg -si 
+```
+
 The easiest way to install this software is to use a package; refer to
 [Repology](https://repology.org/project/bash-completion) for a comprehensive
 list of operating system distributions, package names, and available versions.
@@ -68,13 +76,7 @@ if [ -f /sw/etc/bash_completion ]; then
    . /sw/etc/bash_completion
 fi
 ```
-### Arch Linux
 
-```shell
-git clone https://github.com/nutta-git/bash-completion-for-doas
-cd bash-completion-for-doas
-makepkg -si 
-```
 
 ## Troubleshooting
 
