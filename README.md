@@ -1,26 +1,14 @@
 # bash-completion-for-doas
 
-## Introduction
-
-Please review my patches, **https://github.com/nutta-git/bash-completion-for-doas/blob/master/completions/doas**
-
-before using this code base. I only replaced the word sudo with doas. I don't know the security implications of this procedure. With that being said, 
-## Use this source code at your own risk! 
-
-**https://github.com/nutta-git/bash-completion-for-doas/blob/master/completions/doas**
-
-bash-completion-for-doas is a collection of command line command completions for the
-[Bash shell](https://www.gnu.org/software/bash/), collection of helper
-functions to assist in creating new completions, and set of facilities for
-loading completions automatically on demand, as well as installing them.
+This project was ment to replace sudo with doas. However this project is no longer required due to the AUR 
 
 ## Installation
 
-### Arch Linux
+### Arch Linux (AUR) 
+Use an AUR helper, in this example I used paru 
 
 ```shell
-git clone https://github.com/nutta-git/bash-completion-for-doas
-cd bash-completion-for-doas
-makepkg -si 
+paru opendoas-sudo 
 ```
 
+This will syslink doas with sudo, so you can write sudo on the terminal to execute doas. 
